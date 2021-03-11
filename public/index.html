@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+    <meta charset="UTF-8">
+      
+
+      </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <!--the HTML Code of Sidebar-->
+    <div class="area"></div><nav class="main-menu">
+              <ul>
+                  <li>
+                      <a href="#">
+                          <i class="fa fa-home fa-2x"></i>
+                          <span class="nav-text">
+                              Home
+                          </span>
+                      </a>
+                    
+                  </li>
+                  <li class="has-subnav">
+                      <a href="#">
+                        <i class="fa fa-heart fa-2x"></i>
+                          <span class="nav-text">
+                            Health & Wellness
+                          </span>
+                      </a>
+                      
+                  </li>
+                  <li class="has-subnav">
+                      <a href="#">
+                         <i class="fa fa-play fa-2x"></i>
+                          <span class="nav-text">
+                            Videos
+                          </span>
+                      </a>
+                      
+                  </li>
+                  <li class="has-subnav">
+                      <a href="#">
+                         <i class="fa fa-book fa-2x"></i>
+                          <span class="nav-text">
+                            Submit a Recipe  
+                          </span>
+                      </a>
+                     
+                  </li>
+                  <li>
+                      <a href="#">
+                          <i class="fa fa-bullhorn fa-2x"></i>
+                          <span class="nav-text">
+                              Follow US
+                          </span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                         <i class="fa fa-bell fa-2x"></i>
+                          <span class="nav-text">
+                              Subscribe
+                          </span>
+                      </a>
+                  </li>
+              </ul>
+
+
+              <ul class="SearchBox">
+                <li>
+                   <a href="#">
+                         <i class="fa fa-search fa-2x"></i>
+                        <span class="nav-text">
+                          <head>
+                          <title>Find Recipe</title>
+                          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+                          <script  type="text/javascript" src="typeahead.min.js"></script>
+                          <script type="text/javascript">
+                          $(document).ready(function(){
+                              $('input.typeahead').typeahead({
+                                  name: 'countries',
+                                  remote: 'http://localhost:3000/search?key=%QUERY',
+                                  limit: 10
+                              });
+                          });
+                          </script>
+                          <style type="text/css">
+                          .bs-example{
+                            font-family: sans-serif;
+                            position: relative;
+                            float: left;                     
+                          }
+                          .typeahead, .tt-query, .tt-hint {  
+                            
+                            border: 2px solid #CCCCCC;
+                            border-radius: 8px;
+                            font-size: 12px;
+                            height: 30px;
+                            line-height: 30px;
+                            outline: medium none;
+                            padding: 8px 12px;
+                            width: 100%;
+                          }
+                          .typeahead {
+                            background-color: #fdfdfd;
+                          }
+                          .typeahead:focus {
+                            border: 2px solid #0097CF;
+                          }
+                          .tt-query {
+                            box-shadow: 0 1px 1px rgba(255, 253, 253, 0.075) inset;
+                          }
+                          .tt-hint {
+                            color: #999999;
+                          }
+                          .tt-dropdown-menu {
+                            background-color: #FFFFFF;
+                            border: 1px solid rgba(255, 253, 253, 0.2);
+                            border-radius: 8px;
+                            box-shadow: 0 5px 10px rgba(255, 253, 253, 0.836);
+                            margin-top: 12px;
+                            padding: 8px 0;
+                            width: 422px;
+                          }
+                          .tt-suggestion {
+                            font-size: 24px;
+                            line-height: 24px;
+                            padding: 3px 20px;
+                          }
+                          .tt-suggestion.tt-is-under-cursor {
+                            background-color: #368d8d;
+                            color: #d36565;
+                          }
+                          .tt-suggestion p {
+                            margin: 0;
+                          }
+                          </style>
+                    </head>
+                    <body>
+                      <div class="bs-example">
+                          <input type="text" name="typeahead" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Find Recipe">
+                      </div>
+                  </body>
+                  </span>
+                  </a>
+                </li>  
+            </ul>
+  
+              <ul class="logout">
+                  <li>
+                     <a href="#">
+                           <i class="fa fa-chevron-left fa-2x"></i>
+                          <span class="nav-text">
+                              Return Home
+                          </span>
+                      </a>
+                  </li>  
+              </ul>
+          </nav>
+  </body>
+</html>
+
+
+
